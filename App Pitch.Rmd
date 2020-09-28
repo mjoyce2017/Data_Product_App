@@ -1,0 +1,35 @@
+---
+title: "App Pitch"
+author: "Myles Joyce"
+date: "9/28/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## What's the App? 
+This app was created to predict the species of iris using four different measurements from the plant.  
+The following measurements can be selected on four separate sliders.  
+
+- Petal Length  
+- Petal Width  
+- Sepal Length  
+- Sepal Width  
+
+## Input for the App  
+The slider minimum and maximum values were found using the summary for the iris data.
+```{r, echo = TRUE, comment = ""}
+summary(iris)
+```
+
+## Output for the App
+
+The app produces a value that can be interpreted through instructions given in the output panel. Essentially, the confidence in the prediction is related in how close the numbers come to crossing over the different thresholds for each species.
+
+## Interpretation of Results
+
+Example: The value given is 1.8934.  
+As this number is within the range considered versicolor, the primary prediction would be versicolor; however, it might also be virginica based on how close it is to the threshold of 2.
+
